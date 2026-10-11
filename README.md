@@ -6,7 +6,7 @@ Currently, our Zombie Simulation has a scalability issue. Simply running a simul
 
 Our current issue is that our simulation is currently bottle-necked by the DBMS's speed. While a DBMS is capable of handling a sizable amount of data through the system host's hard drive, the performance is significantly less compared to that of the host's memory. Memory is designed to handle data swiftly. Capitalizing on the speed of memory will help increase the performance of the Zombie Simulation.
 
-Completely switching our data handling process from a DBMS to system memory isn't the complete solution however. The way memory is designed, memory is built to handle low amounts of data swiftly. This means that memory would not solve our lack of scalability either.
+Completely switching our data handling process from a DBMS to system memory is not the complete solution however. The way memory is designed, memory is built to handle low amounts of data swiftly. This means that memory would not solve our lack of scalability either.
 
 ## Solution
 
@@ -22,4 +22,8 @@ I will attempt to solve both of these problems while providing snippets of code 
 
 ## Problem #1: How many agents can we bring from the database to the main memory at a time?
 
-The key limiter of how many agents we could bring into the main memory in a single time is based on how much memory the system has. Specifically, how much memory the system has available at a single time. How can we achieve this? A tool called **psutil** is able to achieve exactly this. The perfect thing about using this utility is that it is compatible on Windows, MacOS, and Linux. The only drawback is that this utility needs to be downloaded, meaning that we will have to add it to an __init__ file, along with a .venv folder.
+The key limiter of how many agents we could bring into the main memory in a single time is based on how much memory the system has. Specifically, how much memory the system has available at a single time. How can we achieve this? A tool called **psutil** is able to achieve exactly this. The perfect thing about using this utility is that it is compatible on Windows, MacOS, and Linux. The only drawback is that this utility needs to be downloaded, meaning that we will have to add it to an initializer file, along with a .venv folder so that the tool is not installed system-wide.
+
+Below is a simple snippet of code that extracts the system host's total memory, available memory, along with the percentage of available memory.
+
+<img width="403" height="201" alt="image" src="https://github.com/user-attachments/assets/5d2259d8-9a45-4a61-ade3-6ceebff9bcb4" />
