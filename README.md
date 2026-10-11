@@ -28,9 +28,12 @@ The image below shows us using a terminal window connected to the virtual enviro
 
 <img width="528" height="170" alt="Install" src="https://github.com/user-attachments/assets/b1b6487e-36f5-461c-beaf-25a32999671a" />
 
+
 Below is a simple snippet of code that extracts the system host's total memory, available memory, along with the percentage of memory in use:
 
+
 <img width="491" height="247" alt="Code" src="https://github.com/user-attachments/assets/53946fca-e691-4f70-a227-22912a69f49e" />
+
 
 With the code above, we get a basic output from the prior script is printed below:
 
