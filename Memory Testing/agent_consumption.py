@@ -17,11 +17,15 @@ class Agent:
 @dataclass(slots=True)
 class Human(Agent):
     weapon_tier: int
+    x_pos: int
+    y_pos: int
 
 
 @dataclass(slots=True)
 class Zombie(Agent):
     strength: int
+    x_pos: int
+    y_pos: int
 
 
 human1 = Human(agent_id=1, agent_type="Human", is_alive=True,
