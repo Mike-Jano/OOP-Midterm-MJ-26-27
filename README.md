@@ -22,3 +22,4 @@ I will attempt to solve both of these problems while providing snippets of code 
 
 ## Problem #1: How many agents can we bring from the database to the main memory at a time?
 
+The key limiter of how many agents we could bring into the main memory in a single time is based on how much memory the system has. Specifically, how much memory the system has available at a single time. How can we achieve this? A tool called **psutil** is able to achieve exactly this. The perfect thing about using this utility is that it is compatible on Windows, MacOS, and Linux. The only drawback is that this utility needs to be downloaded, meaning that we will have to add it to an __init__ file, along with a .venv folder.
