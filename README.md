@@ -48,4 +48,6 @@ Looking at the amount of space the agents take up, we could think that thousands
 
 ## Problem #2: How do we know which agents we should bring from the database to the main memory?
 
+This second key problem intercepts exactly where we form a problem determining how many agents should be in memory. 
+
 
