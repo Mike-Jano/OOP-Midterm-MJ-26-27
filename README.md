@@ -1,5 +1,4 @@
-# OOP-Midterm-MJ-26-27
-## Mike Janosky's OOP Midterm Project.
+# Mike Janosky's OOP Midterm Project.
 
 ## Introduction
 
