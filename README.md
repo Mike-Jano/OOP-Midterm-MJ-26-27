@@ -43,3 +43,5 @@ Since we are using Python, the amount of space a single agent may consume in mem
 <img width="272" height="135" alt="Output2" src="https://github.com/user-attachments/assets/69914e34-09bc-4ecb-96dd-b048c907ea68" />
 
 This shows us that a single agent, of either a zombie or human, consumes about 288 bytes(not bits) of data.
+
+
