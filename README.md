@@ -40,9 +40,9 @@ The data we achieve via this simple script is crucial to determining how many ag
 
 Since we are using Python, the amount of space a single agent may consume in memory is higher than the average language. By using a utility called **pympler**, we can see how much memory is being consumed by a single agent in memory. In the folder titled "Memory Testing", you can find the script to the code to determine the following output. Below is the output to the script.
 
-<img width="272" height="135" alt="Output2" src="https://github.com/user-attachments/assets/69914e34-09bc-4ecb-96dd-b048c907ea68" />
+<img width="171" height="133" alt="image" src="https://github.com/user-attachments/assets/74419f8a-ebd9-403e-8ed2-2b1e4f33b06d" />
 
-This shows us that a single agent, of either a zombie or human, consumes about 288 bytes(not bits) of data.
+This shows us that a single agent, of either a zombie or human, consumes about 368 bytes (not bits) of data.
 
 Looking at the amount of space the agents take up, we could think that thousands of agents could easily be maintained via only memory. That would be true if the agents were the only process being handled by the memory. Remember, the reason we need the agents in memory is to process data around them quickly. If the agents consume all of the memory, then there would be no room for running any of the processes. This leads us to our next problem.
 
