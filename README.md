@@ -24,6 +24,18 @@ I will attempt to solve both of these problems while providing snippets of code 
 
 The key limiter of how many agents we could bring into the main memory in a single time is based on how much memory the system has. Specifically, how much memory the system has available at a single time. How can we achieve this? A tool called **psutil** is able to achieve exactly this. The perfect thing about using this utility is that it is compatible on Windows, MacOS, and Linux. The only drawback is that this utility needs to be downloaded, meaning that we will have to add it to an initializer file, along with a .venv folder so that the tool is not installed system-wide.
 
-Below is a simple snippet of code that extracts the system host's total memory, available memory, along with the percentage of available memory.
+The image below shows us using a terminal window connected to the virtual environment installing the **psutil** utility package:
 
-<img width="403" height="201" alt="image" src="https://github.com/user-attachments/assets/5d2259d8-9a45-4a61-ade3-6ceebff9bcb4" />
+<img width="528" height="170" alt="Install" src="https://github.com/user-attachments/assets/b1b6487e-36f5-461c-beaf-25a32999671a" />
+
+Below is a simple snippet of code that extracts the system host's total memory, available memory, along with the percentage of available memory:
+
+<img width="491" height="247" alt="Code" src="https://github.com/user-attachments/assets/53946fca-e691-4f70-a227-22912a69f49e" />
+Test
+
+With the code above, we get a simple output as such below:
+
+<img width="345" height="150" alt="Output" src="https://github.com/user-attachments/assets/d8324932-4dff-430e-bcea-dda117ca87b9" />
+
+
+
