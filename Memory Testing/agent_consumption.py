@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from pympler import asizeof
 
 # The "slots=True" placed after all of the @dataclass's helps reduce the memory taken up by the agents even more. 
-# Prior to the addition of this parameter, each agent was taking up approximately 850 bytes.
+# Prior to the addition of this parameter, each agent was taking up approximately 1032 bytes.
 # Try it yourself if you like by removing the parameter as a whole.
 
 @dataclass(slots=True)
