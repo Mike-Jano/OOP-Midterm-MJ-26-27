@@ -11,3 +11,14 @@ Completely switching our data handling process from a DBMS to system memory isn'
 ## Solution
 
 After discussing the pros and cons of both a DBMS and memory storage, we begin to notice a trait about the two. They act in complete opposite ways to one another. A DBMS handles lots of data, but slowly; memory handles bits of data, but hastily. The perfect thing about the handlers is that they are able to work together, combining their two strengths.
+
+If it were as simple as iterating through the agent_id's from the database and bringing them to the host's memory, we would have already been done reading. Instead we have a two main questions that must be answered before we have a solid solution to our original problem.
+
+Problem #1: How many agents can we bring from the database to the main memory at a time?
+
+Problem #2: How do we know which agents we should bring from the database to the main memory?
+
+I will attempt to solve both of these problems while providing snippets of code alongside them.
+
+## Problem #1: How many agents can we bring from the database to the main memory at a time?
+
