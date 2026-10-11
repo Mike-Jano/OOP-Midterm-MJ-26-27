@@ -28,12 +28,9 @@ The image below shows us using a terminal window connected to the virtual enviro
 
 <img width="528" height="170" alt="Install" src="https://github.com/user-attachments/assets/b1b6487e-36f5-461c-beaf-25a32999671a" />
 
-
 Below is a simple snippet of code that extracts the system host's total memory, available memory, along with the percentage of memory in use:
 
-
 <img width="491" height="247" alt="Code" src="https://github.com/user-attachments/assets/53946fca-e691-4f70-a227-22912a69f49e" />
-
 
 With the code above, we get a basic output from the prior script is printed below:
 
@@ -46,5 +43,9 @@ Since we are using Python, the amount of space a single agent may consume in mem
 <img width="272" height="135" alt="Output2" src="https://github.com/user-attachments/assets/69914e34-09bc-4ecb-96dd-b048c907ea68" />
 
 This shows us that a single agent, of either a zombie or human, consumes about 288 bytes(not bits) of data.
+
+Looking at the amount of space the agents take up, we could think that thousands of agents could easily be maintained via only memory. That would be true if the agents were the only process being handled by the memory. Remember, the reason we need the agents in memory is to process data around them quickly. If the agents consume all of the memory, then there would be no room for running any of the processes. This leads us to our next problem.
+
+## Problem #2: How do we know which agents we should bring from the database to the main memory?
 
 
