@@ -24,6 +24,7 @@ I will attempt to solve both of these problems while providing snippets of code 
 
 The key limiter of how many agents we could bring into the main memory in a single time is based on how much memory the system has. Specifically, how much memory the system has available at a single time. Not all systems are built equal. A computer with only 8 GB of RAM would complete a simulation substantially slower than one with 32 GB. How can we optimize this? A tool called **psutil** is able to achieve exactly this. The perfect thing about using this utility is that it is compatible on Windows, MacOS, and Linux. The only drawback is that this utility needs to be downloaded, meaning that we will have to add it to an initializer file, along with a **virtual environment** folder so that the tool is not installed system-wide.
 
+The following three code snippets can be found in **memory_scan.py** in the **Memory Testing** folder.
 The image below shows us using a terminal window connected to the virtual environment installing the **psutil** utility package:
 
 <img width="528" height="170" alt="Install" src="https://github.com/user-attachments/assets/b1b6487e-36f5-461c-beaf-25a32999671a" />
