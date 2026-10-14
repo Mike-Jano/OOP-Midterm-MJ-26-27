@@ -59,4 +59,8 @@ It would be easy for us to tell our DBMS to load agents into the simulation base
 
 <img width="747" height="750" alt="image" src="https://github.com/user-attachments/assets/5b4f951c-a594-4a84-8bd9-3aafd6af7c56" />
 
-A problem with this system, however, is it doesn't meet our goals of scalability. It is true that this system will function in deciding which agents will load by position, but a substantial increase in agents will lead to no scale in the process of loading agents.
+A problem with this system, however, is it doesn't meet our goals of scalability. It is true that this system will function in deciding which agents will load by position, but a substantial increase in agents will lead to no scale in the process of loading agents. An upgraded version of this system we can develop can have more sectors be created based on the number of agents there are in the DBMS.
+
+<img width="748" height="748" alt="image" src="https://github.com/user-attachments/assets/5ef164aa-fe15-4da0-be92-0c7dffd3d49d" />
+
+The new grid system is **NOT** only limited to 16 sectors, the sectors would continue to increase depending on the current population of agents in the DBMS. With this added onto our old system, we now can scale the number of agents that can be on the DBMS, without seeing a hit in performance in our simulation. 
