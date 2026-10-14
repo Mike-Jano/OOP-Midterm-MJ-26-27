@@ -18,7 +18,7 @@ Problem #1: How many agents can we bring from the database to the main memory at
 
 Problem #2: How do we know which agents we should bring from the database to the main memory?
 
-I will attempt to solve both of these problems while providing snippets of code alongside them.
+I will attempt to solve both of these problems while providing examples and snippets of code alongside them.
 
 ## Problem #1: How many agents can we bring from the database to the main memory at a time?
 
