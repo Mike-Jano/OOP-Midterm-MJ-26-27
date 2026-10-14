@@ -39,7 +39,7 @@ With the code above, we get a basic output from the prior script is printed belo
 
 The data we achieve via this simple script is crucial to determining how many agents can be ran on a system at a time. We can determine from the image above that our system has approximately 15.28 GB of RAM. Despite this, only 3.02 GB of the 15.28 GB is available for us to use in our simulation. The **available_gb** variable, found in the image above, is the key factor to determining how many agents could be brought to our system's main memory at a single time.
 
-Since we are using Python, the amount of space a single agent may consume in memory is higher than the average language. By using a utility called **pympler**, we can see how much memory is being consumed by a single agent in memory. In the folder titled "Memory Testing", you can find the script to the code to determine the following output. Below is the output to the script.
+Since we are using Python, the amount of space a single agent may consume in memory is higher than the average language. By using a utility called **pympler**, we can see how much memory is being consumed by a single agent in memory. In the folder titled "Memory Testing", you can find the script to the code to determine the following output (or follow this [link](https://github.com/Mike-Jano/OOP-Midterm-MJ-26-27/blob/main/Memory%20Testing/agent_consumption.py)). Below is the output to the script.
 
 <img width="171" height="133" alt="image" src="https://github.com/user-attachments/assets/74419f8a-ebd9-403e-8ed2-2b1e4f33b06d" />
 
