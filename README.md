@@ -65,7 +65,7 @@ A problem with this system, however, is it doesn't meet our goals of scalability
 
 The new grid system is **NOT** only limited to 16 sectors, the sectors would continue to increase depending on the current population of agents in the DBMS. With this added onto our old system, we now can scale the number of agents that can be on the DBMS, without seeing a hit in performance in our simulation. There is still a potential issue with this method. When a zombie is path finding, it will ignore any human that doesn't share a sector, even if the human is closer. This phenomenon is much more likely to occur with the less sectors there are. The image below shows an example of this occurrence.
 
-[Pretend there is an image here]
+<img width="1047" height="555" alt="image" src="https://github.com/user-attachments/assets/b2f816e2-6172-42b7-a512-4db3343809db" />
 
 An alternative method to this grid plane method could be creating chunks based on population density. The agents will still be in the same simulation environment, but the quadrants/sectors will no longer be at play. These chunks are created depending on the population density of an area. A high population density would create a chunk with a smaller area, while a low population density would create a chunk with a larger area.
 
