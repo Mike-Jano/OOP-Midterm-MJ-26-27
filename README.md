@@ -63,10 +63,13 @@ A problem with this system, however, is it doesn't meet our goals of scalability
 
 <img width="748" height="748" alt="image" src="https://github.com/user-attachments/assets/5ef164aa-fe15-4da0-be92-0c7dffd3d49d" />
 
-The new grid system is **NOT** only limited to 16 sectors, the sectors would continue to increase depending on the current population of agents in the DBMS. With this added onto our old system, we now can scale the number of agents that can be on the DBMS, without seeing a hit in performance in our simulation. There is still a potential issue with this method. When a zombie is path finding, it will ignore any human that doesn't share a sector, even if the human is closer. This phenomenon is much more likely to occur with the less sectors there are. The image below shows an example of this occurrence.
+The new grid system is **NOT** only limited to 16 sectors, the sectors would continue to increase depending on a calculation between the current population of agents in the DBMS and the available system memory. With this added onto our old system, we now can scale the number of agents that can be on the DBMS, without seeing a hit in performance in our simulation. Once the populations of the sectors begin to diminish, the amount of sectors will drop to have more agents be able to interact and path find with one another. There is still a potential issue with this method. When a zombie is path finding, it will ignore any human that doesn't share a sector, even if the human is closer. This phenomenon is much more likely to occur with the less sectors there are. The image below shows an example of this occurrence.
 
 <img width="1047" height="555" alt="image" src="https://github.com/user-attachments/assets/b2f816e2-6172-42b7-a512-4db3343809db" />
 
 An alternative method to this grid plane method could be creating chunks based on population density. The agents will still be in the same simulation environment, but the quadrants/sectors will no longer be at play. These chunks are created depending on the population density of an area. A high population density would create a chunk with a smaller area, while a low population density would create a chunk with a larger area.
 
-[Pretend there is an image here] (I do not know how to code this)
+<img width="751" height="755" alt="image" src="https://github.com/user-attachments/assets/a4550098-d07e-4302-94b6-4f10e1345134" />
+(I do not know how to code this)
+
+With this method, we now counter the sector barrier issue caused by the last system. The only problem with this system is the complexity as well as the system potentially requiring high amounts of resources. For the project, our preferred method will be the expanding sector one. To ensure that agents do not move more than intended, we can add a global variable as well as a tag to the Agent superclass that would apply to every human and zombie.
