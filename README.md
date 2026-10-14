@@ -24,7 +24,7 @@ I will attempt to solve both of these problems while providing snippets of code 
 
 The key limiter of how many agents we could bring into the main memory in a single time is based on how much memory the system has. Specifically, how much memory the system has available at a single time. Not all systems are built equal. A computer with only 8 GB of RAM would complete a simulation substantially slower than one with 32 GB. How can we optimize this? A tool called **psutil** is able to achieve exactly this. The perfect thing about using this utility is that it is compatible on Windows, MacOS, and Linux. The only drawback is that this utility needs to be downloaded, meaning that we will have to add it to an initializer file, along with a **virtual environment** folder so that the tool is not installed system-wide.
 
-The following three code snippets can be found in **[memory_scan.py](https://github.com/Mike-Jano/OOP-Midterm-MJ-26-27/blob/main/Memory%20Testing/agent_consumption.py)** in the **Memory Testing** folder.
+The following three code snippets can be found in **[memory_scan.py](https://github.com/Mike-Jano/OOP-Midterm-MJ-26-27/blob/main/Memory%20Testing/memory_scan.py)** in the **Memory Testing** folder.
 The image below shows us using a terminal window connected to the virtual environment installing the **psutil** utility package:
 
 <img width="528" height="170" alt="Install" src="https://github.com/user-attachments/assets/b1b6487e-36f5-461c-beaf-25a32999671a" />
@@ -49,6 +49,14 @@ Looking at the amount of space the agents take up, we could think that thousands
 
 ## Problem #2: How do we know which agents we should bring from the database to the main memory?
 
-This second key problem intercepts exactly where we form a problem determining how many agents should be in memory. 
+This second key problem intercepts exactly where we form a problem determining how many agents should be in memory. We know that we should limit how many agents we should bring to the system's main memory, but how do we determine **WHICH** agents should and shouldn't be. We could answer this by simply understanding how the simulation works. What calculations are being made in the simulation? **Distances**. We will decide which agents are loaded to the memory based on their location in the simulation's environment. 
 
+Simply saying we'll pick agents "based on location" is quite a broad approach to the solution, with numerous ways to go about handling the task. I will provide a few ways we could go about it. Let's imagine the simulation environment as a grid plane such as the one below.
 
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b94390a7-9e35-4000-91e4-e5539ecb1307" />
+
+It would be easy for us to tell our DBMS to load agents into the simulation based on which quadrant they reside. Agents in Quadrant 1 can be spotted if both their coordinates are positive. Q2 if x = + & y = -; Q3 if x = - & y = -; Q4 if x = - & y = +. With these parameters, the environment below would function.
+
+<img width="747" height="750" alt="image" src="https://github.com/user-attachments/assets/5b4f951c-a594-4a84-8bd9-3aafd6af7c56" />
+
+A problem with this system, however, is it doesn't meet our goals of scalability. It is true that this system will function in deciding which agents will load by position, but a substantial increase in agents will lead to no scale in the process of loading agents.
