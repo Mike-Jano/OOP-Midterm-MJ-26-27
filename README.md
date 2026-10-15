@@ -73,3 +73,9 @@ An alternative method to this grid plane method could be creating chunks based o
 (I do not know how to code this)
 
 With this method, we now counter the sector barrier issue caused by the last system. The only problem with this system is the complexity as well as the system potentially requiring high amounts of resources. For the project, our preferred method will be the expanding sector one. To ensure that agents do not move more than intended, we can add a global variable as well as a tag to the Agent superclass that would apply to every human and zombie.
+
+<img width="305" height="172" alt="image" src="https://github.com/user-attachments/assets/c6b0109c-1074-4cac-a75e-9559f146e365" />
+
+This image shows the "current_iteration" tag being added to the Agent super-class. The current_iteration will also be added to the PosgreSQL DBMS to ensure continuity. There will be a global variable called "global_iteration", where these agents will reference. If current_iteration is less than global_iteration, then it will be able to move in the iteration. If the value is equal (or somehow greater) then the agent will be passed when reading through the possible moves. This is to prevent any repeat movements that were not meant to occur yet.
+
+
